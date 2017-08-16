@@ -4,6 +4,5 @@ public class SmurfsRunner {
 		Smurf smurf=new Smurf("Handy Smurf");
 		smurf.getName();
 		smurf.eat();
-		smurf.getHatColor();
 	}
 }
