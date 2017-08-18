@@ -2,10 +2,10 @@ import java.util.ArrayList;
 import java.util.Collections;
 
 public class NetflixQueue {
-	
+
 	ArrayList<Movie> movies = new ArrayList<Movie>();
-	
-	public Movie getBestMovie(){
+
+	public Movie getBestMovie() {
 		this.sortMoviesByRating();
 		return movies.get(0);
 	}
@@ -13,14 +13,15 @@ public class NetflixQueue {
 	public void addMovie(Movie movie) {
 		movies.add(movie);
 	}
-	
-	public Movie getMovie(int movieNumber){
-		if(movieNumber < movies.size()) 
-		return movies.get(movieNumber);
-		else System.err.println("That index is larger than the movie queue. Pass a smaller number to the getMovie() method.");
+
+	public Movie getMovie(int movieNumber) {
+		if (movieNumber < movies.size())
+			return movies.get(movieNumber);
+		else
+			System.err.println("That index is larger than the movie queue. Pass a smaller number to the getMovie() method.");
 		return null;
 	}
-	
+
 	public void sortMoviesByRating() {
 		Collections.sort(movies);
 	}
@@ -30,11 +31,14 @@ public class NetflixQueue {
 		for (Movie movie : movies) {
 			System.out.println(movie);
 		}
+		System.out.println();
 	}
 
+	public void bestMovie() {
+		System.out.println("The best movie is The Martian.");
+	}
+
+	public void secondBest() {
+		System.out.println("The second best movie is Guardians of the Galaxy.");
+	}
 }
-
-
-
-
-
