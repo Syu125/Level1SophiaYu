@@ -1,4 +1,3 @@
-
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 
@@ -14,7 +13,7 @@ import twitter4j.Twitter;
 import twitter4j.TwitterFactory;
 import twitter4j.auth.AccessToken;
 
-public class GetLatestTweet implements ActionListener{
+class GetLatestTweet implements ActionListener{
 	JFrame frame= new JFrame();
 	JPanel panel=new JPanel();
 	JButton b1= new JButton();
