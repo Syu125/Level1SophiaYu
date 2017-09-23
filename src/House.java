@@ -34,7 +34,7 @@ public class House {
 				i=250;
 				houseDrawer.setPenColor(Color.blue);
 			}
-			houseDrawer.setSpeed(26);
+			houseDrawer.setSpeed(50);
 			houseDrawer.penDown();
 			houseDrawer.move(i);;
 			houseDrawer.turn(45);
