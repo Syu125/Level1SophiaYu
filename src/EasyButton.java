@@ -16,9 +16,8 @@ public class EasyButton implements MouseListener {
 	public static void main(String[] args) {
 		EasyButton eb=new EasyButton();
 	
-	void run(){
 	eb.showEasyButton();
-	eb.mouseClicked(this);
+	//eb.mouseClicked(e);
 	}
 	
 	/*
@@ -61,28 +60,28 @@ public class EasyButton implements MouseListener {
 
 
 	@Override
-	public void mousePressed(MouseEvent e) {
+	public void mousePressed(MouseEvent f) {
 		// TODO Auto-generated method stub
 		
 	}
 
 
 	@Override
-	public void mouseReleased(MouseEvent e) {
+	public void mouseReleased(MouseEvent g) {
 		// TODO Auto-generated method stub
 		
 	}
 
 
 	@Override
-	public void mouseEntered(MouseEvent e) {
+	public void mouseEntered(MouseEvent h) {
 		// TODO Auto-generated method stub
 		
 	}
 
 
 	@Override
-	public void mouseExited(MouseEvent e) {
+	public void mouseExited(MouseEvent i) {
 		// TODO Auto-generated method stub
 		
 	}
