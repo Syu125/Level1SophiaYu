@@ -17,9 +17,11 @@ public class EasyButton implements MouseListener {
 		EasyButton eb=new EasyButton();
 	
 	eb.showEasyButton();
-	//eb.mouseClicked(e);
-	}
 	
+	}
+	void mouse() {
+		
+	}
 	/*
 	 * Use the methods below to make an easy button show on the screen. 
 	 * When clicked, it says some very annoying words.
@@ -39,7 +41,9 @@ public class EasyButton implements MouseListener {
 		Icon icon = new ImageIcon(imageURL);
 		this.easyButtonImage = new JLabel(icon);
 		quizWindow.add(easyButtonImage);
+		quizWindow.addMouseListener(this);
 		quizWindow.pack();
+		
 	}
 
 
