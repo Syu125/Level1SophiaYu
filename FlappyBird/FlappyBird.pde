@@ -61,5 +61,5 @@ void draw() {
   }
 
 void mousePressed() {
-  birdYVelocity=-10;
+  birdYVelocity=-5;
 }
