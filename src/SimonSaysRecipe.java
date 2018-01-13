@@ -46,6 +46,8 @@ public class SimonSaysRecipe extends KeyAdapter {
     	else if(keyCode != imageIndex ){
     		points+=add;
     		speak("Correct");
+    	}else {
+    		speak("Wrong");
     	}
     	//19. Use the speak method to tell the user if they were correct or not
     	
