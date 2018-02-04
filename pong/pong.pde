@@ -1,7 +1,9 @@
 import ddf.minim.*;
 Minim minim;
 AudioSample sound;  
+AudioPlayer music;
 PImage backgroundImage;
+int score = 0;
 int x = 240;
 int y = 160;
 int s = 5;
@@ -11,13 +13,15 @@ int S = 0;
 void setup() {
   minim = new Minim (this);
   sound = minim.loadSample("pong.wav", 128);
+  music = minim.loadFile("music.wav");
+  music.play();
   backgroundImage = loadImage("pong.jpg");
   size(480, 320);
 }
 void draw() {
-
   Y = mouseY;
   image(backgroundImage, 0, 0);
+  text("Score: "+score,10,15);
   x+=s;
   y+=S;
   ellipse(x, y, 5, 5);  
@@ -41,16 +45,18 @@ void draw() {
     S=5;
   }
   if (intersects(x, y, 0, Y, 40)) {
-    if (Y > 240) {
+    score ++;
+    if (Y > 160) {
       S = 1;
-    } else if (Y < 240) {
+    } else if (Y < 160) {
       S = -1;
-    } else if (Y == 240) {
+    } else if (Y == 160) {
       S = 0;
     }
   }else if(x <5){
     background(0,0,0);
     text("You Lose!",215,160);
+    text("Score: "+score,220,180);
     stop();
   }
 }
