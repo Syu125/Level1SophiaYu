@@ -1,5 +1,3 @@
-package intro_to_array_lists;
-
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 import java.util.ArrayList;
@@ -15,6 +13,8 @@ public class GuestBook implements ActionListener {
 	JButton b1 = new JButton();
 	JButton b2 = new JButton();
 	String allNames = "";
+	String number = "";
+	int count = 0;
 	ArrayList<String>name = new ArrayList<>();
 	
 	public static void main(String[] args)  {
@@ -50,15 +50,21 @@ void create() {
 public void actionPerformed(ActionEvent e) {
 	// TODO Auto-generated method stub
 	if(e.getSource()==b1) {
+		count++;
 		name.add(JOptionPane.showInputDialog("Enter in a name."));
 		
 	}
 	
 	if(e.getSource()==b2) {
 		for(int i = 0; i<name.size();i++) {
-			allNames = allNames + "\n" +name.get(i);
+			int n = i+1;
+			number = "Guest #" + n + ": ";
+			allNames = allNames + "\n"+ number + name.get(i);
 			if(i==name.size()-1) {
 			JOptionPane.showMessageDialog(null, allNames);
+			allNames = "";
+			number = "";
+		
 			}
 		}
 	}
