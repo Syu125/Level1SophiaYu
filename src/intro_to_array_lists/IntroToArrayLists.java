@@ -20,7 +20,7 @@ public class IntroToArrayLists {
 		//2. Add five Strings to your list
 		
 		for(int j = 0; j<5; j++) {
-	
+			
 		a.add(JOptionPane.showInputDialog("List a type of fruit."));
 		}
 		//3. Print all the Strings using a standard for-loop
@@ -39,8 +39,7 @@ public class IntroToArrayLists {
 		}*/
 		//5. Print only the even numbered elements in the list.
 		for(int i = 0; i <a.size(); i++) {
-			count++;
-		if(count%2==0) {
+		if(i%2==0) {
 			list += a + "\n" ;
 			if(i == a.size()-1) {
 				JOptionPane.showMessageDialog(null, list);
