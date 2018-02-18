@@ -12,6 +12,7 @@ public class IntroToArrayLists {
 	}
 	void run() {
 		String list = "";
+		String e = "e";
 		int count = 0;
 		//1. Create an array list of Strings
 		ArrayList<String>a = new ArrayList<String>();
@@ -38,7 +39,8 @@ public class IntroToArrayLists {
 			list = "";
 		}*/
 		//5. Print only the even numbered elements in the list.
-		for(int i = 0; i <a.size(); i++) {
+		/*for(int i = 0; i <a.size(); i++) {
+			count++;
 		if(i%2==0) {
 			list += a + "\n" ;
 			if(i == a.size()-1) {
@@ -47,11 +49,29 @@ public class IntroToArrayLists {
 				list = "";
 		}else {
 			list="";
-		}
+		}*/
 		//6. Print all the Strings in reverse order.
-		
+		/*for(int i = 0; i <a.size(); i++) {
+			
+			list += a + "\n" ;
+			if(i == a.size()-1) {
+			JOptionPane.showMessageDialog(null, list);
+			}
+			list = "";
+		}*/
 		//7. Print only the Strings that have the letter 'e' in them.
+		for(int i = 0; i <a.size(); i++) {
+			String keep = a.get(i);
+			
+				if(keep.contains(e)) {
+					list += a + "\n" ;
+					
+			if(i == a.size()-1) {
+				JOptionPane.showMessageDialog(null, list);
+			}
+		}
+		}
 	}
 	}
 	
-}
+
