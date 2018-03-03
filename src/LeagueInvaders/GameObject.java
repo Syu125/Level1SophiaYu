@@ -1,6 +1,7 @@
+package LeagueInvaders;
 import java.awt.Graphics;
 
-public class GameObject {
+public class GameObject extends Rocketship {
 	int x;
 	int y;
 	int width;
@@ -13,9 +14,9 @@ public GameObject() {
 	height = 100;
 }
 void update() {
-	
+
 }
 void draw(Graphics g) {
-	g.fillRect(x, y, 100, 100);
+	
 }
 }
