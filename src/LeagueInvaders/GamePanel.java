@@ -18,6 +18,8 @@ public class GamePanel extends JPanel implements ActionListener, KeyListener{
 	Font endFont;
 	Font killFont;
 	Font restartFont;
+	Rocketship r1;
+	ObjectManager om;
 
 	final int MENU_STATE = 0;
 	final int GAME_STATE = 1;
@@ -30,7 +32,10 @@ public GamePanel(){
 	instructFont = new Font("Tahona",Font.PLAIN,30);
 	endFont = new Font("Impact",Font.PLAIN,50);
 	killFont = new Font("Tahona",Font.PLAIN,20);
-	restartFont = new Font("Tahona",Font.PLAIN,25);}
+	restartFont = new Font("Tahona",Font.PLAIN,25);
+	r1 = new Rocketship(250,700,50,50);
+	om = new ObjectManager(r1);
+}
 void startGame() {
 	t1.start();
 }
@@ -38,7 +43,7 @@ void updateMenuState() {
 	
 }
 void updateGameState() {
-	
+	om.update();
 }
 void updateEndState() {
 	
@@ -60,6 +65,7 @@ void drawMenuState(Graphics g) {
 void drawGameState(Graphics g) {
 	g.setColor(Color.BLACK);
 	g.fillRect(0, 0, 500, 800);
+	om.draw(g);
 }
 void drawEndState(Graphics g) {
 	g.setColor(Color.RED);
@@ -112,6 +118,14 @@ public void keyPressed(KeyEvent e) {
 		currentState = MENU_STATE;
 		System.out.println("2");
 	}
+	}
+	if(e.getKeyCode()==KeyEvent.VK_LEFT) {
+		r1.x-=5;
+		
+	}
+	if(e.getKeyCode()==KeyEvent.VK_RIGHT) {
+		r1.x += 5;
+		
 	}
 }
 @Override
