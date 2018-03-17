@@ -46,8 +46,6 @@ public class ObjectManager {
 	}
 	void purgeObjects() {
 		
-		
-		
 	}
 	public void manageEnemies(){
         if(System.currentTimeMillis() - enemyTimer >= enemySpawnTime){

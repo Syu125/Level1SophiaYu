@@ -6,6 +6,8 @@ import javax.swing.JFrame;
 public class LeagueInvaders {
 	JFrame f1;
 	GamePanel gp;
+	static int w = 500;
+	static int h = 800;
 	public static void main(String[] args) {
 		LeagueInvaders LI = new LeagueInvaders();
 		LI.setup();
@@ -19,8 +21,6 @@ public class LeagueInvaders {
         f1.pack();
 	}
 	void setup() {
-		final int w = 500;
-		final int h = 800;
 		f1.setSize(w, h);
 		f1.setVisible(true);
 		gp.startGame();
