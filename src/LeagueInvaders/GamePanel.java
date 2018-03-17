@@ -127,6 +127,9 @@ public void keyPressed(KeyEvent e) {
 		r1.x += 5;
 		
 	}
+	if(e.getKeyCode()==KeyEvent.VK_SPACE) {
+	om.addProjectile(new Projectile(r1.x,r1.y,10,10));
+	}
 }
 @Override
 public void keyReleased(KeyEvent e) {

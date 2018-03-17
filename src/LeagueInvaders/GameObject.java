@@ -8,11 +8,11 @@ public class GameObject{
 	int height;
 	boolean isAlive;
 	
-public GameObject() {
-	x = 10;
-	y = 10;
-	width = 100;
-	height = 100;
+public GameObject(int x2, int y2, int width2, int height2) {
+	x = x2;
+	y = y2;
+	width = width2;
+	height = height2;
 	isAlive = true;
 }
 void update() {
