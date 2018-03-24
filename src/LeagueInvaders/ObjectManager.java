@@ -45,8 +45,40 @@ public class ObjectManager {
 		al.add(a);
 	}
 	void purgeObjects() {
-		
+		al.iterator();
+		for(Alien alien: al) {
+			if(alien.isAlive==false) {
+				
+		al.remove(alien);
+		}
+		}
+		for(Projectile proj: po) {
+			if(proj.isAlive==false) {
+				po.remove(al);
+			}
+		}
+		}
+	void checkCollision() {
+		for(Alien als : al){
+
+	        if(r2.collisionBox.intersects(als.collisionBox)){
+	                als.isAlive = false;
+
+	                
+	        }
+
 	}
+		for(Projectile prs : po){
+
+	        if(r2.collisionBox.intersects(prs.collisionBox)){
+	                prs.isAlive = false;
+
+	        }
+
+	}
+
+	}
+	
 	public void manageEnemies(){
         if(System.currentTimeMillis() - enemyTimer >= enemySpawnTime){
                 addAlien(new Alien(new Random().nextInt(LeagueInvaders.w), 0, 50, 50));

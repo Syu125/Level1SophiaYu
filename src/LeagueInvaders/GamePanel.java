@@ -44,6 +44,9 @@ void updateMenuState() {
 }
 void updateGameState() {
 	om.update();
+	om.manageEnemies();
+	om.checkCollision();
+	om.purgeObjects();
 }
 void updateEndState() {
 	
@@ -120,11 +123,11 @@ public void keyPressed(KeyEvent e) {
 	}
 	}
 	if(e.getKeyCode()==KeyEvent.VK_LEFT) {
-		r1.x-=5;
+		r1.x-=20;
 		
 	}
 	if(e.getKeyCode()==KeyEvent.VK_RIGHT) {
-		r1.x += 5;
+		r1.x += 20;
 		
 	}
 	if(e.getKeyCode()==KeyEvent.VK_SPACE) {
