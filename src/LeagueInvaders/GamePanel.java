@@ -107,8 +107,7 @@ public class GamePanel extends JPanel implements ActionListener, KeyListener {
 	}
 
 	void drawGameState(Graphics g) {
-		g.setColor(Color.BLACK);
-		g.fillRect(0, 0, 500, 800);
+		g.drawImage(spaceImg, 0, 0, 500, 800, null );
 		om.draw(g);
 	}
 
